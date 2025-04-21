@@ -1,22 +1,29 @@
 <Project Sdk="Microsoft.NET.Sdk">
+	
 	<PropertyGroup>
-		<PackageId>Ardalis.SmartEnum.JsonNet</PackageId>
-		<Title>Ardalis.SmartEnum.JsonNet</Title>
-		<Description>Json.NET (de)serialization support for Ardalis.SmartEnum.</Description>
-		<Summary>Json.NET (de)serialization support for Ardalis.SmartEnum.</Summary>
-		<PackageTags>enum;smartenum;ardalis;json;json.net;converter</PackageTags>
+		<PackageId>Ardalis.SmartEnum.GuardClauses</PackageId>
+		<Title>Ardalis.SmartEnum.GuardClauses</Title>
+		<Description>Guard clauses for Ardalis.SmartEnum.</Description>
+		<Summary>Guard clauses for Ardalis.SmartEnum.</Summary>
+		<PackageTags>enum;smartenum;ardalis;guard;guardclauses</PackageTags>
 		<PackageReleaseNotes>See root package release notes</PackageReleaseNotes>
 		<PackageIcon>icon.png</PackageIcon>
-		<AssemblyName>Ardalis.SmartEnum.JsonNet</AssemblyName>
-		<RootNamespace>Ardalis.SmartEnum.JsonNet</RootNamespace>
+		<AssemblyName>Ardalis.SmartEnum.GuardClauses</AssemblyName>
+		<RootNamespace>Ardalis.SmartEnum.GuardClauses</RootNamespace>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
+	
 	<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
 		<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Newtonsoft.Json" />
+	  <PackageReference Include="Ardalis.GuardClauses" />
 	</ItemGroup>
 	<ItemGroup>
+		<None Include="README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
 		<None Include="$(SolutionDir)img\icon.png" Pack="true" Visible="false" PackagePath="" />
 	</ItemGroup>
 	<ItemGroup>

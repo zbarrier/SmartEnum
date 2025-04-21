@@ -7,17 +7,19 @@
         <Summary>ASP.NET Core MVC Model Binding Support for Ardalis.SmartEnum.</Summary>
         <PackageTags>enum;smartenum;ardalis;aspnet;aspnetcore;mvc;model binding;modelbinding</PackageTags>
         <PackageIcon>icon.png</PackageIcon>
-        <PackageReleaseNotes>Updating to net7.</PackageReleaseNotes>
+		<PackageReleaseNotes>See root package release notes</PackageReleaseNotes>
         <AssemblyName>Ardalis.SmartEnum.ModelBinding</AssemblyName>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.Mvc.Core"/>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" />
+        <PackageReference Include="Newtonsoft.Json" />
+        <PackageReference Include="System.Text.Encodings.Web" />
     </ItemGroup>
     <ItemGroup>
-        <ProjectReference Include="..\SmartEnum\SmartEnum.csproj"/>
+        <ProjectReference Include="..\SmartEnum\SmartEnum.csproj" />
     </ItemGroup>
     <ItemGroup>
-        <None Include="$(SolutionDir)img\icon.png" Pack="true" Visible="false" PackagePath=""/>
+        <None Include="$(SolutionDir)img\icon.png" Pack="true" Visible="false" PackagePath="" />
     </ItemGroup>
 </Project>

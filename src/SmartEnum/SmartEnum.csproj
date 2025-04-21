@@ -8,9 +8,8 @@
 		<PackageTags>enum;smartenum;ardalis</PackageTags>
 		<PackageIcon>icon.png</PackageIcon>
 		<PackageReleaseNotes>
-			Adding multi-targeting.
-			Add SmartEnumNameAttribute, a DataAnnotations ValidationAttribute by @sdepouw in #447
-			Support SmartEnums as dictionary keys by @Steve-OH in #458
+* Updating package dependencies
+* TEnum[] to List-TEnum for webassembly compatibility issue in .net 9 by @soenneker in https://github.com/ardalis/SmartEnum/pull/557
 		</PackageReleaseNotes>
 		<AssemblyName>Ardalis.SmartEnum</AssemblyName>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
@@ -34,7 +33,16 @@
 		</None>
 		<None Include="$(SolutionDir)img\icon.png" Pack="true" Visible="false" PackagePath="" />
 	</ItemGroup>
-	<ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)' == 'netStandard2.0'">
 	  <PackageReference Include="System.ComponentModel.Annotations" />
+	</ItemGroup>
+	<ItemGroup>
+	  <PackageVersion Update="SonarAnalyzer.CSharp" Version="9.32.0.97167" />
+	</ItemGroup>
+	<ItemGroup>
+	  <PackageReference Update="SonarAnalyzer.CSharp">
+	    <PrivateAssets>all</PrivateAssets>
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+	  </PackageReference>
 	</ItemGroup>
 </Project>
